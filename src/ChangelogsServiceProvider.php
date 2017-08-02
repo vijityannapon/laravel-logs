@@ -1,10 +1,10 @@
 <?php
 
-namespace vijityannapon\logs;
+namespace Vijityannapon\Logs;
 
 use Illuminate\Support\ServiceProvider;
 
-class logsServiceProvider extends ServiceProvider
+class LogsServiceProvider extends ServiceProvider
 {
     /**
      * Perform post-registration booting of services.

@@ -1,6 +1,6 @@
 <?php
 
-namespace vijityannapon\logs;
+namespace Vijityannapon\Logs;
 
 class SkeletonClass
 {
