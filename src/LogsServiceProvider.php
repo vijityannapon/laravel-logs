@@ -45,6 +45,8 @@ class LogsServiceProvider extends ServiceProvider
 
             if ($config['provider'] == 'loggly') {
                 return new Adapters\Loggly();
+            } elseif ($config['provider'] == 'stackdriver') {
+                return new Adapters\Stackdriver();
             } else {
                 return new Adapters\Monolog();
             }
