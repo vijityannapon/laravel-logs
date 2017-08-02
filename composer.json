@@ -27,12 +27,12 @@
     },
     "autoload": {
         "psr-4": {
-            "vijityannapon\\logs\\": "src"
+            "Vijityannapon\\Logs\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "vijityannapon\\logs\\": "tests"
+            "Vijityannapon\\Logs\\": "tests"
         }
     },
     "scripts": {
