@@ -2,15 +2,15 @@
 
 namespace Vijityannapon\Logs;
 
-class Logs {
+class Monologs {
 
 	public function info() 
 	{
-		die('Normal Info');
+		die('Monolog Info');
 	}
 
 	public function warning() 
 	{
-		die('Normal Warning');
+		die('Monolog Warning');
 	}
 }

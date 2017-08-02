@@ -41,7 +41,16 @@ class LogsServiceProvider extends ServiceProvider
     {
         $this->app->singleton('logs', function($app)
         {
-            return new Logs();
+            $config = $this->app->config->get('logs');
+
+            if ($config['provider'] == 'loggly') {
+                return new Logglylog();
+            } elseif ($config['provider'] == 'monolog') {
+                return new Monolog();
+            } else {
+                return new Log();
+            }
+            
         });
     }
     /**
