@@ -6,48 +6,51 @@ use Vijityannapon\Logs\LoggerInterface;
 
 class Monolog implements LoggerInterface {
 
-    public function emergency() 
+    public function emergency($message, array $context = array()) 
     {
-        die('Monolog emergency');
+        die('Loggly Info');
     }
 
-    public function alert() 
+    public function alert($message, array $context = array()) 
     {
-        die('Monolog alert');
+        die('Loggly Warning');
     }
 
-    public function critical($value='')
+    public function critical($message, array $context = array()) 
     {
         # code...
     }
 
-    public function error($value='')
+    public function error($message, array $context = array()) 
+    {
+
+
+        # code...
+    }
+
+    public function warning($message, array $context = array())
     {
         # code...
     }
 
-    public function warning($value='')
+    public function notice($message, array $context = array()) 
     {
         # code...
     }
 
-    public function notice($value='')
+    public function info($message, array $context = array()) 
     {
         # code...
     }
 
-    public function info($value='')
+    public function debug($message, array $context = array()) 
     {
         # code...
     }
 
-    public function debug($value='')
+    public function log($level, $message, array $context = array())
     {
         # code...
     }
 
-    public function log($value='')
-    {
-        # code...
-    }
 }

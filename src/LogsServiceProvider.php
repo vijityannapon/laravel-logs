@@ -44,11 +44,9 @@ class LogsServiceProvider extends ServiceProvider
             $config = $this->app->config->get('logs');
 
             if ($config['provider'] == 'loggly') {
-                return new Logglylog();
-            } elseif ($config['provider'] == 'monolog') {
-                return new Monolog();
+                return new Adapters\Loggly();
             } else {
-                return new Log();
+                return new Adapters\Monolog();
             }
             
         });
