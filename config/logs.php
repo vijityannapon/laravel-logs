@@ -2,7 +2,7 @@
 
 return [
 
-    'adapter' => 'loggly'
+    'adapter' => 'loggly',
     'loggly'  => [
         'key'   => '',
         'tag'   => '',
