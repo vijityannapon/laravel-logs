@@ -27,6 +27,11 @@ Add this to Facades config/app.php
 Logs' => Vijityannapon\Logs\Facades\Logs::class,
 ```
 
+and use this in terminal or cmd
+~~~
+php artisan vendor:publish --provider="Vijityannapon\Logs\LogsServiceProvider"
+~~~
+
 ## License
 
 The MIT License (MIT). Please see [License File](LICENSE.md) for more information.
