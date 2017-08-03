@@ -2,5 +2,9 @@
 
 return [
 
-	'provider' => 'loggly'
+    'adapter' => 'loggly'
+    'loggly'  => [
+        'key'   => '',
+        'tag'   => '',
+    ]
 ];

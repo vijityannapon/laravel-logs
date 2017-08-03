@@ -43,12 +43,18 @@ class LogsServiceProvider extends ServiceProvider
         {
             $config = $this->app->config->get('logs');
 
-            if ($config['provider'] == 'loggly') {
+            if ($config['adapter'] == 'loggly') {
+
                 return new Adapters\Loggly();
-            } elseif ($config['provider'] == 'stackdriver') {
+
+            } elseif ($config['adapter'] == 'stackdriver') {
+
                 return new Adapters\Stackdriver();
+
             } else {
+
                 return new Adapters\Monolog();
+
             }
             
         });

@@ -3,54 +3,64 @@
 namespace Vijityannapon\Logs\Adapters;
 
 use Vijityannapon\Logs\LoggerInterface;
+use Log;
 
 class Loggly implements LoggerInterface {
 
+    public function __construct()
+    {
+        $config = config('logs.loggly');
+        $key    = ($config['key']) ? $config['key'] : '';
+        $tag    = ($config['tag']) ? $config['tag'] : '';
+
+        $handler = new \Monolog\Handler\LogglyHandler($key.'/tag/'.$tag); 
+        $logger = Log::getMonolog(); 
+        $logger->pushHandler($handler); 
+    }
+
     public function emergency($message, array $context = array()) 
     {
-        die('Loggly Info');
+        Log::emergency($message, $context);
     }
 
     public function alert($message, array $context = array()) 
     {
-        die('Loggly Warning');
+        Log::alert($message, $context);
     }
 
     public function critical($message, array $context = array()) 
     {
-        # code...
+        Log::critical($message, $context);
     }
 
     public function error($message, array $context = array()) 
     {
-
-
-        # code...
+        Log::error($message, $context);
     }
 
     public function warning($message, array $context = array())
     {
-        # code...
+        Log::warning($message, $context);
     }
 
     public function notice($message, array $context = array()) 
     {
-        # code...
+        Log::notice($message, $context);
     }
 
     public function info($message, array $context = array()) 
     {
-        # code...
+        Log::info($message, $context);
     }
 
     public function debug($message, array $context = array()) 
     {
-        # code...
+        Log::debug($message, $context);
     }
 
     public function log($level, $message, array $context = array())
     {
-        # code...
+        Log::log($message, $context);
     }
 
 
